@@ -6,29 +6,39 @@
         <title>My Daily Blog</title>
         <link rel="stylesheet" a href="./assets/css/style.css">
         <link rel="stylesheet" a href="./assets/css/form.css">
-
     </head>
-    <body>
+
+    <body class="light">
+
         <header class="lighBorderHeader">
             <button id="sunIcon">☀️</button>
             <button id="moonIcon">🌙</button>
         </header>
-        <form action="blog.html" method="post">
-            <label for="blogTitle">What's On Your Mind?</label>
 
-            <label for="author">Username:</label>
-            <input type="text" id="author" name="Username">
+        <main>
+            <section class="titleCard">
+                <div id="titleCardImage">
+                    <img src="./word-concept-color-geometric-shapes-blog_205544-13021.avif">
+                </div>
+            </section>
 
-            <label for="title">Title:</label>
-            <input type="text" id="title" name="title">
-
-            <label for="blogContent">Content:</label>
-            <textarea id="blogContent" name="blogContent" rows="20"></textarea>
-
-            <input type="submitBtn" value="Submit Blog">
-        </form>
+            <section class="blogForm">
+                <form action="blog.html" method="post">
+                    <label for="blogTitle">What's On Your Mind?</label>
+                    <label for="author">Username:</label>
+                    <input type="text" id="author" name="Username">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title">
+                    <label for="blogContent">Content:</label>
+                    <textarea id="blogContent" name="blogContent" rows="20"></textarea>
+                    <button type="submit" id="submitbutton">Submit</button>
+                </form>
+            </section>
+        </main>
 
         <script src="./assets/js/logic.js"></script>
         <script src="./assets/js/form.js"></script>
+
     </body>
+
 </html>
