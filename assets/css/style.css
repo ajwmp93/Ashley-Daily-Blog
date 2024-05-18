@@ -1,30 +1,60 @@
 html {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.lightBorderHeader {
+    display:block;
+    margin: 0;
+    padding: 0;
+    min-height: 4.5rem;
+    border-bottom: 5px solid black;
+    position: relative;
+}
 
-.light {
+.darkBorderHeader {
+    display:block;
+    margin: 0;
+    padding: 0;
+    min-height: 4.5rem;
+    border-bottom: 5px double black;
+    position: relative;
+}
+
+.lightMode {
     background-color: white;
     color: black;
-    height: 100vh;
-  }
+}
 
-  .dark {
+.darkMode {
     background-color: black;
-    height: 100vh;
-    color: #bebebe
-   
-  }
-
-.switch input {
-    border: 1px solid black;
+    color: white;
 }
 
-.button {
-    border: 1px solid black;
+#sunIcon {
     position: absolute;
+    top: 1.8rem;
+    right: 1rem;
     cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    font-size: 24px;
+    display: inline-block;
 }
+
+#moonIcon {
+position: absolute;
+top: 1.8rem;
+right: 1rem;
+cursor: pointer;
+font-size: 24px;
+display: inline-block;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+#titleCardImage {
+    display: flex;
+    border: 1px solid black;
+    position: relative;
+}
+

@@ -2,5 +2,26 @@ form {
     border: 1px solid black;
     display: flex;
     flex-direction: column;
-    line-height: 50px;
+    line-height: px;
 }
+
+h2 {
+    text-align: center;
+}
+
+.blogForm {
+    padding-left: 200px;
+    
+}
+.lightMode input[type='text'],
+.lightMode textarea {
+    background-color: white;
+    color: black;
+}
+
+.darkMode input[type='text'],
+.darkMode textarea {
+    background-color: black;
+    color: white;
+}
+
