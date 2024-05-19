@@ -1,5 +1,4 @@
 form {
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     line-height: px;
@@ -11,8 +10,25 @@ h2 {
 
 .blogForm {
     padding-left: 200px;
-    
 }
+
+
+input {
+    height: 50px;
+    width: 100%;
+    padding: 6px;
+    margin-top: 10px;
+    font-size: 2em;
+    border: 1px solid #001b44;
+  }
+
+  .blogForm {
+    border-left: 10px double black;
+    display: block;
+    padding: 60px;
+    width: 80vw;
+  }
+
 .lightMode input[type='text'],
 .lightMode textarea {
     background-color: white;
@@ -25,3 +41,9 @@ h2 {
     color: white;
 }
 
+#submitbutton {
+    margin: 20px;
+    line-height: 50px;
+    background-color: black;
+    color: white;
+}
