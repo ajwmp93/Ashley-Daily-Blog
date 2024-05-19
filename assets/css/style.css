@@ -20,12 +20,12 @@ html {
 }
 
 .lightMode {
-    background-color: white;
+    background-color: #d7e6f0;
     color: black;
 }
 
 .darkMode {
-    background-color: black;
+    background-color: #153c72;
     color: white;
 }
 
@@ -64,5 +64,16 @@ footer {
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding-top: 30px;
     border-top: 10px double black;
+}
+
+.portfolio {
+    border: 8px double #6d1b20;
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+    margin-left: 45%;
+    margin-right: 45%;
+    background-color: white;
 }
