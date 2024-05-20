@@ -30,24 +30,4 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('author').value = parsedData.author;
     document.getElementById('blogTitle').value = parsedData.title;
     document.getElementById('blogContent').value = parsedData.content;
-
-    function displayBlogPosts () {
-        const storedData = localStorage.getItem('blogData');
-        if (storedData) {
-             const parsedData = JSON.parse(storedData);
-
-            const blogPostElement = document.createElement('div');
-            blogPostElement.classList.add('blog-post');
-            blogPostElement.innerHTML = `
-            <h2>${parsedData.title}</h2>
-            <p><strong>Author:</strong> ${parsedData.author}</p>
-            <p>${parsedData.content}</p>
-            `;
-
-            const blogPostsContainer = document.getElementById('blogPostsContainer');
-            blogPostsContainer.appendChild(blogPostElement);
-        }
-    }
-
-    displayBlogPosts ();
 });
