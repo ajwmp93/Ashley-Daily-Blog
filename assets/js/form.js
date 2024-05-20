@@ -1,33 +1,25 @@
 document.addEventListener('DOMContentLoaded', function() { 
+
     const submitButton = document.getElementById('submitbutton');
 
     submitButton.addEventListener('click', function (event) {
         event.preventDefault();
+
+        let blogEntries = JSON.parse(localStorage.getItem('blogEntries')) || [];
 
         const author = document.getElementById('author').value;
         const title = document.getElementById('blogTitle').value;
         const  content = document.getElementById('blogContent').value;
 
         const blogData = {author: author, title: title, content: content};
-        console.log('blog data:', blogData);
 
-        localStorage.setItem('blogData', JSON.stringify(blogData));
+        blogEntries.push(blogData);
+
+        localStorage.setItem('blogEntries', JSON.stringify(blogEntries));
         localStorage.setItem('author', author);
         localStorage.setItem('blogTitle', title);
         localStorage.setItem('blogContent', content);
 
     window.location.href = 'blog.html';
     });
-
-    const storedData = localStorage.getItem('blogData');
-    console.log('stored data:', storedData);
-
-    const parsedData = JSON.parse(storedData);
-    console.log('parsed data:', parsedData);
-
-    console.log('author:', parsedData.author);
-
-    document.getElementById('author').value = parsedData.author;
-    document.getElementById('blogTitle').value = parsedData.title;
-    document.getElementById('blogContent').value = parsedData.content;
 });

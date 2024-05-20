@@ -1,20 +1,25 @@
 document.addEventListener('DOMContentLoaded', function() { 
-    
-    const postAreaElement = document.getElementById('postArea');
-    const articles = JSON.parse(localStorage.getItem('articles')) || [];
+    const parsedDataArray = JSON.parse(localStorage.getItem('blogEntries')) || [];
+    const postAreaElement = document.getElementById('post-area');
+    const storedData = localStorage.getItem('blogEntries');
+    let blogPost = '';
 
-    let blogPostElement = '';
-    for (let i = 0; i < articles.length; i++) {
-        blogPostElement += `
-        <div class="blog-post-element">
-        <h2>${parsedData[i].title}</h2>
-        <p><strong>Author:</strong> ${parsedData[i].author}</p>
-        <p>${parsedData[i].content}</p>
-        `
-        postAreaElement.innerHTML = blogPostElement
+    if (storedData) {
+        const parsedData = JSON.parse(storedData);
     }
-    const backArrow = document.getElementById('backArrow');
-     if (backArrow) {
+    for (let i = 0; i < parsedDataArray.length; i++) {
+        blogPost += `
+        <div class="blog-post-element">
+            <h2>${parsedData[i].title}</h2>
+            <p><strong>Author:</strong> ${parsedData[i].author}</p>
+            <p>${parsedData[i].content}</p>
+        </div>
+    `;
+    postAreaElement.innerHTML = blogPost;
+}
+
+const backArrow = document.getElementById('backArrow');
+    if (backArrow) {
         backArrow.addEventListener('click', function (event) {
             event.stopPropagation();
             window.location.href = 'index.html';
