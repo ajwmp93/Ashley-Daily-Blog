@@ -10,13 +10,15 @@ document.addEventListener('DOMContentLoaded', function() {
     for (let i = 0; i < parsedDataArray.length; i++) {
         blogPost += `
         <div class="blog-post-element">
-            <h2>${parsedData[i].title}</h2>
-            <p><strong>Author:</strong> ${parsedData[i].author}</p>
-            <p>${parsedData[i].content}</p>
+            <h2>${parsedDataArray[i].title}</h2>
+            <p><strong>Author:</strong> ${parsedDataArray[i].author}</p>
+            <p>${parsedDataArray[i].content}</p>
         </div>
     `;
+    }
+    
     postAreaElement.innerHTML = blogPost;
-}
+
 
 const backArrow = document.getElementById('backArrow');
     if (backArrow) {
