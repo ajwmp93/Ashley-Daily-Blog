@@ -10,7 +10,7 @@ html {
     position: relative;
 }
 
-.darkBorderHeader {
+.nightBorderHeader {
     display:block;
     margin: 0;
     padding: 0;
@@ -19,12 +19,12 @@ html {
     position: relative;
 }
 
-.lightMode {
+.dayMode {
     background-color: #d7e6f0;
     color: black;
 }
 
-.darkMode {
+.nightMode {
     background-color: #153c72;
     color: white;
 }

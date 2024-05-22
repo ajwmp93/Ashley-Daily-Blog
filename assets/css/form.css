@@ -29,14 +29,14 @@ input {
     width: 80vw;
   }
 
-.lightMode input[type='text'],
-.lightMode textarea {
+.dayMode input[type='text'],
+.dayMode textarea {
     background-color: white;
     color: black;
 }
 
-.darkMode input[type='text'],
-.darkMode textarea {
+.nightMode input[type='text'],
+.nightMode textarea {
     background-color: black;
     color: white;
 }

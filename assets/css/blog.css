@@ -7,7 +7,7 @@
     position: relative;
 }
 
-.darkBorderHeader {
+.nightBorderHeader {
     display:block;
     margin: 0;
     padding: 0;
@@ -16,12 +16,12 @@
     position: relative;
 }
 
-.lightMode {
+.dayMode {
     background-color: #d7e6f0;
     color: black;
 }
 
-.darkMode {
+.nightMode {
     background-color: #153c72;
     color: white;
 }
@@ -36,45 +36,75 @@
 }
 
 #moonIcon {
-position: absolute;
-top: 1.8rem;
-right: 1rem;
-cursor: pointer;
-font-size: 24px;
-display: inline-block;
+    position: absolute;
+    top: 1.8rem;
+    right: 1rem;
+    cursor: pointer;
+    font-size: 24px;
+    display: inline-block;
 }
 
-.lightMode input[type='text'],
-.lightMode textarea {
+.dayMode input[type='text'],
+.dayMode textarea {
     background-color: white;
     color: black;
 }
 
-.darkMode input[type='text'],
-.darkMode textarea {
+.nightMode input[type='text'],
+.nightMode textarea {
     background-color: black;
     color: white;
+}
+
+#backArrow {
+    position: absolute;
+    top: 1.8rem;
+    right: 4rem;
+    cursor: pointer;
+    font-size: 24px;
+    display: inline-block;
 }
 
 #post-area {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    border-bottom: 10px double black;
+    padding-bottom: 50px;
 }
 
 .blog-post-element {
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
-    width: calc(33.33% - 20px);
     box-sizing: border-box;
 }
 
 .blog-post-element h2 {
     font-size: 1.2em;
     margin-top: 0;
+    text-decoration: underline;
 }
 
 .blog-post-element p {
     margin-bottom: 0;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.portfolio {
+    border: 8px double #6d1b20;
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+    margin-left: 45%;
+    margin-right: 45%;
+    background-color: white;
 }

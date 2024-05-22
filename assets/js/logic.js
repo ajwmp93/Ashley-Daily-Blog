@@ -1,53 +1,50 @@
-document.addEventListener('DOMContentLoaded', function() {
+const sunIcon = document.querySelector('#sunIcon');
+const moonIcon = document.querySelector('#moonIcon');
+const body = document.body;
 
-    const sunIcon = document.querySelector('#sunIcon');
-    const moonIcon = document.querySelector('#moonIcon');
-    const body = document.body;
+let mode = 'dayMode';
 
-    let mode = 'lightMode';
+checkMode();
 
-    checkMode();
+sunIcon.addEventListener('click', function (event) {
+    event.preventDefault();
+    setNightMode();
+})
 
-    sunIcon.addEventListener('click', function (event) {
-        event.preventDefault();
-        setDarkMode();
-    })
-
-    moonIcon.addEventListener('click', function (event) {
-        event.preventDefault();
-        setLightMode();
-    })
-});
+moonIcon.addEventListener('click', function (event) {
+    event.preventDefault();
+    setDayMode();
+})
 
 function checkMode() {
-    let mode = 'lightMode';
+    let mode = 'dayMode';
     if (!mode) {
-        setLightMode();
+        setDayMode();
     }
-    if (mode === 'lightMode') {
-        setLightMode();
+    if (mode === 'dayMode') {
+        setDayMode();
     }
-    else if (mode === 'darkMode') {
-        setDarkMode();
+    else if (mode === 'nightMode') {
+        setNightMode();
     }
 }
 
-function setLightMode () {
+function setDayMode () {
     const body = document.body;
-    body.classList.remove('darkMode');
-    body.classList.add('lightMode');
+    body.classList.remove('nightMode');
+    body.classList.add('dayMode');
     sunIcon.style.display = 'inline-block';
     moonIcon.style.display = 'none';
-    localStorage.setItem('mode', 'lightMode');
-    mode = 'lightMode';
+    localStorage.setItem('mode', 'dayMode');
+    mode = 'dayMode';
 }
 
-function setDarkMode () {
+function setNightMode () {
     const body = document.body;
-    body.classList.remove('lightMode');
-    body.classList.add('darkMode');
+    body.classList.remove('dayMode');
+    body.classList.add('nightMode');
     sunIcon.style.display = 'none';
     moonIcon.style.display= 'inline-block';
-    localStorage.setItem('mode', 'darkMode');
-    mode = 'darkMode';
+    localStorage.setItem('mode', 'nightMode');
+    mode = 'nightMode';
 };
