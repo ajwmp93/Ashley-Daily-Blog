@@ -16,7 +16,7 @@ To use this web application, just enter your name in the username field, your bl
 ![blog-posts-page](./blog-posts-page.png)
 ```
 
-// link to posted web page goes here//
+Here is the link to my deployed page: https://ajwmp93.github.io/Ashley-Daily-Blog/index.html
 
 ## Credits
 
